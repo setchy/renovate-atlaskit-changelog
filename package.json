@@ -2,7 +2,7 @@
   "name": "renovate-atlaskit-changelog",
   "version": "latest",
   "devDependencies": {
-    "@atlaskit/heading": "1.8.1",
+    "@atlaskit/heading": "3.0.0",
     "@atlaskit/avatar": "21.0.0",
     "@atlaskit/badge": "16.0.0",
     "@atlaskit/button": "20.0.0",
