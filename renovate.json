@@ -1,8 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "group:atlaskit"
   ],
   "labels": ["dependency"],
-  "rangeStrategy": "pin"
+  "rangeStrategy": "pin",
+  "prConcurrentLimit": 100
 }
