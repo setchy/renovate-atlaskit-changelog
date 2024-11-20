@@ -4,5 +4,5 @@
   "devDependencies": {
     "@atlaskit/heading": "1.8.1"
   },
-  "packageManager": "pnpm@9.14.1"
+  "packageManager": "pnpm@9.14.2"
 }
