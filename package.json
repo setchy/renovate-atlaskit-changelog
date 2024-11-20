@@ -3,7 +3,7 @@
   "version": "latest",
   "devDependencies": {
     "@atlaskit/heading": "1.8.1",
-    "@atlaskit/avatar": "21.0.0",
+    "@atlaskit/avatar": "21.17.2",
     "@atlaskit/badge": "16.0.0",
     "@atlaskit/button": "20.0.0",
     "@atlaskit/checkbox": "15.0.0",
