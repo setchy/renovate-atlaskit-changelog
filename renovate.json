@@ -3,7 +3,8 @@
   "extends": [
     "config:recommended",
     "group:atlaskit",
-    ":prConcurrentLimitNone"
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone"
   ],
   "labels": ["dependency"],
   "rangeStrategy": "pin"
