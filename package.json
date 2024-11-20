@@ -2,7 +2,7 @@
   "name": "renovate-atlaskit-changelog",
   "version": "latest",
   "devDependencies": {
-    "@atlaskit/heading": "2.4.7"
+    "@atlaskit/heading": "1.8.1"
   },
   "packageManager": "pnpm@9.14.1"
 }
