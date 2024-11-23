@@ -9,14 +9,6 @@
   "labels": ["dependency"],
   "rangeStrategy": "pin",
   "packageRules": [
-    /*
-    {
-      "description": "Ideal rule - sourceDirectory supporting template",
-      "extends": ["packages:atlaskit"],
-      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
-      "sourceDirectory": "design-system/{{ lookup (split packageName '/') 1 }}"
-    },
-    */
     {
       "matchPackageNames": ["@atlaskit/app-provider"],
       "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
