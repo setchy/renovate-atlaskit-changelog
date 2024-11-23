@@ -1,0 +1,436 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:atlaskit",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone"
+  ],
+  "labels": ["dependency"],
+  "rangeStrategy": "pin",
+  "packageRules": [
+    /*
+    {
+      "description": "Ideal rule - sourceDirectory supporting template",
+      "extends": ["packages:atlaskit"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/{{ lookup (split packageName '/') 1 }}"
+    },
+    */
+    {
+      "matchPackageNames": ["@atlaskit/app-provider"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/app-provider"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/atlassian-navigation"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/atlassian-navigation"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/avatar-group"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/avatar-group"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/avatar"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/avatar"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/badge"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/badge"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/banner"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/banner"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/blanket"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/blanket"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/breadcrumbs"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/breadcrumbs"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/button"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/button"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/calendar"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/calendar"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/checkbox"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/checkbox"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/code"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/code"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/codemod-cli"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/codemod-cli"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/comment"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/comment"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/css-reset"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/css-reset"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/css"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/css"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/datetime-picker"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/datetime-picker"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/drawer"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/drawer"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/dropdown-menu"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/dropdown-menu"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/ds-explorations"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/ds-explorations"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/ds-lib"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/ds-lib"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/dynamic-table"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/dynamic-table"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/empty-state"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/empty-state"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/eslint-plugin-ui-styling-standard"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/eslint-plugin-ui-styling-standard"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/eslint-plugin"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/eslint-plugin"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/eslint-utils"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/eslint-utils"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/flag"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/flag"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/focus-ring"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/focus-ring"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/form"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/form"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/grid"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/grid"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/heading"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/heading"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/icon-lab"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/icon-lab"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/icon-object"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/icon-object"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/icon"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/icon"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/image"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/image"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/inline-dialog"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/inline-dialog"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/inline-edit"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/inline-edit"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/inline-message"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/inline-message"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/layering"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/layering"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/legacy-custom-icons"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/legacy-custom-icons"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/link"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/link"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/locale"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/locale"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/logo"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/logo"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/lozenge"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/lozenge"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/menu"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/menu"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/modal-dialog"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/modal-dialog"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/motion"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/motion"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/onboarding"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/onboarding"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/page-header"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/page-header"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/page-layout"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/page-layout"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/page"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/page"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/pagination"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/pagination"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/popper"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/popper"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/popup"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/popup"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/portal"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/portal"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/primitives"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/primitives"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/progress-bar"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/progress-bar"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/progress-indicator"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/progress-indicator"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/progress-tracker"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/progress-tracker"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/radio"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/radio"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/range"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/range"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/react-select"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/react-select"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/reduced-ui-pack"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/reduced-ui-pack"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/selection-message"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/selection-message"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/select"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/select"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/side-navigation"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/side-navigation"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/skeleton"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/skeleton"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/spinner"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/spinner"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/storybook-addon"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/storybook-addon"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/stylelint"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/stylelint"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/table-tree"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/table-tree"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/table"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/table"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/tabs"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/tabs"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/tag-group"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/tag-group"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/tag"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/tag"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/textarea"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/textarea"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/textfield"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/textfield"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/theme"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/theme"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/toggle"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/toggle"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/tokens"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/tokens"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/tooltip"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/tooltip"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/visually-hidden"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/visually-hidden"
+    },
+    {
+      "matchPackageNames": ["@atlaskit/width-detector"],
+      "sourceUrl": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "sourceDirectory": "design-system/width-detector"
+    }
+  ]
+}
